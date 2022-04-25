@@ -1,8 +1,10 @@
-package com.example.zacarias_wagecalculator;
+package com.example.zacarias_wagecalculator.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.zacarias_wagecalculator.R;
 
 public class MainActivity extends AppCompatActivity {
 
