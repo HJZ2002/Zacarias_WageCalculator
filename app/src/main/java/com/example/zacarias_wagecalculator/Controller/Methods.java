@@ -2,42 +2,42 @@ package com.example.zacarias_wagecalculator.Controller;
 
 public class Methods {
 
-    public double Effort(double solvehours) {
-        double solvemorehours;
-        if (solvehours > 20) {
-            solvemorehours = solvehours - 10;
+    public double effort(double hours){
+        double overtime;
+        if (hours > 8) {
+            overtime = hours - 8;
         } else {
-            solvemorehours = 0;
+            overtime = 0;
         }
-        return solvemorehours;
+        return overtime;
     }
 
-    //regularwage
-    public double Time(String employee, double solvehours, double morehours) {
-        double solveregularwage;
-        if (employee.equals("Regular")) {
-            solveregularwage = (solvehours - morehours) * 120;
-        } else if (employee.equals("Probitionary")) {
-            solveregularwage = (solvehours - morehours) * 100;
+    public double time(String employeeType, double hours, double overtime){
+        double regWage;
+        if (employeeType.equals("Regular")){
+            regWage = (hours - overtime) * 100;
+        } else if (employeeType.equals("Probationary")){
+            regWage = (hours - overtime) * 90;
         } else {
-            solveregularwage = (solvehours - morehours) * 80;
+            regWage = (hours - overtime) * 75;
         }
-        return solveregularwage;
+        return regWage;
     }
-    //Overtime
-    public double Overwork(String employee, double overtime) {
-        double solveovertimewage;
-        if (employee.equals("Regular")) {
-            solveovertimewage = overtime * 105;
-        } else if (employee.equals("Probitionary")) {
-            solveovertimewage =overtime*94;
-        }else {
-            solveovertimewage=overtime*60;
+
+    public double overwork(String employeeType, double overtime){
+        double otWage;
+        if (employeeType.equals("Regular")){
+            otWage = overtime * 115;
+        } else if (employeeType.equals("Probationary")){
+            otWage = overtime * 100;
+        } else {
+            otWage = overtime * 90;
         }
-        return solveovertimewage;
+        return otWage;
     }
-    public double Total(double regularwage, double overtimewage) {
-        return regularwage + overtimewage;
+
+    public double total(double regWage, double otWage){
+        return regWage + otWage;
     }
 }
 

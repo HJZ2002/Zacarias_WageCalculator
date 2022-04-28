@@ -12,10 +12,6 @@ import com.example.zacarias_wagecalculator.Controller.Methods;
 import com.example.zacarias_wagecalculator.Model.Variables;
 import com.example.zacarias_wagecalculator.R;
 
-import java.text.DateFormat;
-import java.util.Calendar;
-import java.util.zip.DataFormatException;
-
 public class Report extends AppCompatActivity {
     TextView employee,hours,overtimeinfo,regularpay,overtimepay,overall;
 
@@ -30,29 +26,29 @@ public class Report extends AppCompatActivity {
         getSupportActionBar().hide();
 
         Intent intent = getIntent();
-        numbers.setName(intent.getStringExtra("keyName"));
-        numbers.setEmployeeType(intent.getStringExtra("keyType"));
-        numbers.setPart(intent.getDoubleExtra("keyHours", numbers.getPart()));
+        numbers.setName(intent.getStringExtra("Name"));
+        numbers.setEmployeeType(intent.getStringExtra("type"));
+        numbers.setPart(intent.getDoubleExtra("hours", numbers.getPart()));
 
 
-        employee = findViewById(R.id.Employee);
-        hours = findViewById(R.id.HoursRendered);
-        overtimeinfo = findViewById(R.id.Overtimehours);
-        regularpay = findViewById(R.id.Regularpay);
-        overtimepay = findViewById(R.id.Overtimepay);
+        employee = findViewById(R.id.employee);
+        hours = findViewById(R.id.hoursrendered);
+        overtimeinfo = findViewById(R.id.overtimehours);
+        regularpay = findViewById(R.id.regularpay);
+        overtimepay = findViewById(R.id.overtimepay);
         overall = findViewById(R.id.overallpay);
 
-        double overtime = payoff.Effort(numbers.getPart());
-        double Reg = payoff.Time(numbers.getEmployeeType(), numbers.getPart(), overtime);
-        double otWage = payoff.Overwork(numbers.getEmployeeType(), overtime);
-        double total = payoff.Total(Reg, otWage);
+        double salary = payoff.effort(numbers.getPart());
+        double input = payoff.time(numbers.getEmployeeType(), numbers.getPart(), salary);
+        double display = payoff.overwork(numbers.getEmployeeType(), salary);
+        double total = payoff.total(input, display);
 
 
         employee.setText(numbers.getName() + " (" + numbers.getEmployeeType() + ")");
-        hours.setText("Hours rendered: " + numbers.getPart());
-        overtimeinfo.setText("Overtime hours: " + overtime);
-        regularpay.setText("Regular Wage: " + Reg);
-        overtimepay.setText("Overtime wage: " + otWage);
+        hours.setText("total Hours rendered: " + numbers.getPart());
+        overtimeinfo.setText("total Overtime hours: " + display);
+        regularpay.setText("total Regular Wage: " + input);
+        overtimepay.setText("total Overtime wage: " + display);
         overall.setText(String.valueOf(total));
     }
 }

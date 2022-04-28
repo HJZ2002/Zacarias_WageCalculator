@@ -7,7 +7,7 @@
     tools:context=".View.WageInfo">
 
     <EditText
-        android:id="@+id/Employeeinfo"
+        android:id="@+id/employeeinfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -77,7 +77,7 @@
         app:layout_constraintTop_toTopOf="@+id/btnprobitionary" />
 
     <TextView
-        android:id="@+id/Choose"
+        android:id="@+id/choose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="324dp"
@@ -104,7 +104,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnCalculate"
+        android:id="@+id/btncalculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="136dp"

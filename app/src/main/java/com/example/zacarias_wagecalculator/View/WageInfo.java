@@ -31,10 +31,10 @@ public class WageInfo extends AppCompatActivity implements View.OnClickListener{
         btnregular = findViewById(R.id.btnregular);
         btnprobitionary = findViewById(R.id.btnprobitionary);
         btnpartime = findViewById(R.id.btnpartime);
-        btnnext = findViewById(R.id.btnCalculate);
-        employee = findViewById(R.id.Employeeinfo);
+        btnnext = findViewById(R.id.btncalculate);
+        employee = findViewById(R.id.employeeinfo);
         hourinfo = findViewById(R.id.hourinfo);
-        typeofemployee = findViewById(R.id.Choose);
+        typeofemployee = findViewById(R.id.choose);
 
         //set listeners here
         btnregular.setOnClickListener(this);
@@ -58,7 +58,7 @@ public class WageInfo extends AppCompatActivity implements View.OnClickListener{
                 numbers.setEmployeeType("Part time");
                 typeofemployee.setText("Employee choose: Part time");
                 break;
-            case R.id.btnCalculate:
+            case R.id.btncalculate:
                 if (numbers.getEmployeeType() == "") {
                     Toast.makeText(WageInfo.this, "Enter The Field", Toast.LENGTH_SHORT).show();
                 } else {
