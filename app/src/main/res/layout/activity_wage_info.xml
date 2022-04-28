@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     tools:context=".View.WageInfo">
 
     <EditText
@@ -26,8 +25,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="WageCalculator"
-        android:textSize="49dp"
         android:textColor="@color/black"
+        android:textSize="49dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,32 +46,35 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/Worker"
+        android:id="@+id/btnregular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="276dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="268dp"
         android:text="Regular"
+        android:textSize="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/Employee"
+        android:id="@+id/btnprobitionary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="132dp"
         android:text="Probitionary"
+        android:textSize="12dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Worker" />
+        app:layout_constraintTop_toTopOf="@+id/btnregular" />
 
     <Button
-        android:id="@+id/Parttime"
+        android:id="@+id/btnpartime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
+        android:layout_marginEnd="16dp"
         android:text="Part-time"
+        android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Employee" />
+        app:layout_constraintTop_toTopOf="@+id/btnprobitionary" />
 
     <TextView
         android:id="@+id/Choose"
@@ -89,20 +91,20 @@
 
     <EditText
         android:id="@+id/hourinfo"
-        android:layout_width="252dp"
-        android:layout_height="46dp"
-        android:layout_marginBottom="244dp"
+        android:layout_width="261dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="240dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Please Enter How Many Hours"
+        android:text="How Many Hours ?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/Calculate"
+        android:id="@+id/btnCalculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="136dp"

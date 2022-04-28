@@ -1,73 +1,69 @@
 package com.example.zacarias_wagecalculator.Model;
 
 public class Variables {
-    private double hours;
-    private double overtime;
-    private double regularwage;
-    private double otwage;
-    private double totalwage;
+    private double Part, Overt, Balance, Effort, Result;
     private String name,
-            employeetype = "";
+            employeeType = "";
 
-
-    public Variables() { }
-
-    //getters
-    public double getHours() {
-        return hours;
+    public Variables() {
     }
 
-    public double getOvertime() {
-        return overtime;
+    public double getPart() {
+        return Part;
     }
 
-    public double getRegularwage() {
-        return regularwage;
+    public double getOvert() {
+        return Overt;
     }
 
-    public double getOtwage() {
-        return otwage;
+    public double getBalance() {
+        return Balance;
     }
 
-    public double getTotalwage() {
-        return totalwage;
+    public double getEffort() {
+        return Effort;
+    }
+
+    public double getResult() {
+        return Result;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getEmployeetype() {
-        return employeetype;
+    public String getEmployeeType() {
+        return employeeType;
     }
 
-    //setters
-    public void setHours(double hours) {
-        this.hours = hours;
+    public void setPart(double part) {
+        Part = part;
     }
 
-    public void setOvertime(double overtime) {
-        this.overtime = overtime;
+    public void setOvert(double overt) {
+        Overt = overt;
     }
 
-    public void setRegularwage(double regularwage) {
-        this.regularwage = regularwage;
+    public void setBalance(double balance) {
+        Balance = balance;
     }
 
-    public void setOtwage(double otwage) {
-        this.otwage = otwage;
+    public void setEffort(double effort) {
+        Effort = effort;
     }
 
-    public void setTotalwage(double totalwage) {
-        this.totalwage = totalwage;
+    public void setResult(double result) {
+        Result = result;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setEmployeetype(String employeetype) {
-        this.employeetype = employeetype;
+    public void setEmployeeType(String employeeType) {
+        this.employeeType = employeeType;
     }
-
 }
+
+
+

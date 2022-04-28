@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import com.example.zacarias_wagecalculator.R;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView calculator;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
-        calculator=findViewById(R.id.imageView);
         getSupportActionBar().hide();
         new Handler().postDelayed(new Runnable() {
             @Override

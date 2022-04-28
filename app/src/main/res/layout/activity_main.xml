@@ -6,27 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".View.MainActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="424dp"
+        android:text="Wage Calulator"
+        android:textColor="@color/black"
+        android:textSize="54dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="324dp"
-        android:layout_height="320dp"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/ic_baseline_calculate_24"
+        android:id="@+id/imageView3"
+        android:layout_width="326dp"
+        android:layout_height="277dp"
+        android:layout_marginTop="68dp"
+        android:src="@drawable/calculatorsalary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="416dp"
-        android:text="Wage Calulator"
-        android:textSize="54dp"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
