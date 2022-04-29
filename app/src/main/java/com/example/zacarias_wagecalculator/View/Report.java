@@ -15,8 +15,9 @@ import com.example.zacarias_wagecalculator.R;
 public class Report extends AppCompatActivity {
     TextView employee,hours,overtimeinfo,regularpay,overtimepay,overall;
 
+
     Variables numbers=new Variables();
-    Methods payoff=new Methods();
+    Methods methods=new Methods();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,8 +28,9 @@ public class Report extends AppCompatActivity {
 
         Intent intent = getIntent();
         numbers.setName(intent.getStringExtra("Name"));
-        numbers.setEmployeeType(intent.getStringExtra("type"));
-        numbers.setPart(intent.getDoubleExtra("hours", numbers.getPart()));
+        numbers.setEmployeeType(intent.getStringExtra("Type"));
+        numbers.setPart(intent.getDoubleExtra("Hours", numbers.getPart()));
+
 
 
         employee = findViewById(R.id.employee);
@@ -38,17 +40,17 @@ public class Report extends AppCompatActivity {
         overtimepay = findViewById(R.id.overtimepay);
         overall = findViewById(R.id.overallpay);
 
-        double salary = payoff.effort(numbers.getPart());
-        double input = payoff.time(numbers.getEmployeeType(), numbers.getPart(), salary);
-        double display = payoff.overwork(numbers.getEmployeeType(), salary);
-        double total = payoff.total(input, display);
+        double part = methods.solveEF(numbers.getPart());
+        double regular = methods.solveRegular(numbers.getEmployeeType(), numbers.getPart(), part);
+        double overtime = methods.solveTime(numbers.getEmployeeType(), part);
+        double all = methods.solveTotal(part, overtime);
 
 
         employee.setText(numbers.getName() + " (" + numbers.getEmployeeType() + ")");
-        hours.setText("total Hours rendered: " + numbers.getPart());
-        overtimeinfo.setText("total Overtime hours: " + display);
-        regularpay.setText("total Regular Wage: " + input);
-        overtimepay.setText("total Overtime wage: " + display);
-        overall.setText(String.valueOf(total));
+        hours.setText("Hours rendered: " + numbers.getPart());
+        overtimeinfo.setText("Overtime hours: " + part);
+        regularpay.setText("Regular Wage: " + regular);
+        overtimepay.setText("Overtime wage: " + all);
+        overall.setText(String.valueOf(all));
     }
 }

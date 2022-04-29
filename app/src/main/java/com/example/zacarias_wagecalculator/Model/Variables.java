@@ -1,32 +1,31 @@
 package com.example.zacarias_wagecalculator.Model;
 
 public class Variables {
-    private double part, overt, balance, effort, result;
+    private double part, effort, balance, over, all;
     private String name,
             employeeType = "";
 
     public Variables() {
     }
 
-    //getters
     public double getPart() {
         return part;
-    }
-
-    public double getOvert() {
-        return overt;
-    }
-
-    public double getBalance() {
-        return balance;
     }
 
     public double getEffort() {
         return effort;
     }
 
-    public double getResult() {
-        return result;
+    public double getBalance() {
+        return balance;
+    }
+
+    public double getOver() {
+        return over;
+    }
+
+    public double getAll() {
+        return all;
     }
 
     public String getName() {
@@ -38,24 +37,23 @@ public class Variables {
     }
 
     public void setPart(double part) {
-        part = part;
-    }
-
-    //setters
-    public void setOvert(double overt) {
-        overt = overt;
-    }
-
-    public void setBalance(double balance) {
-        balance = balance;
+        this.part = part;
     }
 
     public void setEffort(double effort) {
-        effort = effort;
+        this.effort = effort;
     }
 
-    public void setResult(double result) {
-        result = result;
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public void setOver(double over) {
+        this.over = over;
+    }
+
+    public void setAll(double all) {
+        this.all = all;
     }
 
     public void setName(String name) {
@@ -66,6 +64,9 @@ public class Variables {
         this.employeeType = employeeType;
     }
 }
+
+
+
 
 
 

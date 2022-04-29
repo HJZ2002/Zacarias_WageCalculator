@@ -17,7 +17,7 @@ import com.example.zacarias_wagecalculator.R;
 
 public class WageInfo extends AppCompatActivity implements View.OnClickListener{
     EditText employee,hourinfo;
-    Button btnregular,btnpartime,btnprobitionary,btnnext;
+    Button btnregular,btnpartime,btnprobitionary,btnnext,goback;
     TextView typeofemployee;
     Variables numbers=new Variables();
 
@@ -41,6 +41,7 @@ public class WageInfo extends AppCompatActivity implements View.OnClickListener{
         btnprobitionary.setOnClickListener(this);
         btnpartime.setOnClickListener(this);
         btnnext.setOnClickListener(this);
+
     }
 
     @Override
@@ -48,21 +49,21 @@ public class WageInfo extends AppCompatActivity implements View.OnClickListener{
         switch (view.getId()){
             case R.id.btnregular:
                 numbers.setEmployeeType("Regular");
-                typeofemployee.setText("Employee choose : Regular");
+                typeofemployee.setText("Employee type: Regular");
                 break;
             case R.id.btnprobitionary:
                 numbers.setEmployeeType("Probationary");
-                typeofemployee.setText("Employee choose: Probationary");
+                typeofemployee.setText("Employee type: Probationary");
                 break;
             case R.id.btnpartime:
                 numbers.setEmployeeType("Part time");
-                typeofemployee.setText("Employee choose: Part time");
+                typeofemployee.setText("Employee type: Part-time");
                 break;
             case R.id.btncalculate:
                 if (numbers.getEmployeeType() == "") {
-                    Toast.makeText(WageInfo.this, "Enter The Field", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(WageInfo.this, "Enter the fields that required", Toast.LENGTH_SHORT).show();
                 } else {
-                    numbers.setName(String.valueOf(employee.getText()));
+                    numbers.setName(String.valueOf(typeofemployee.getText()));
                     numbers.setPart(Double.parseDouble(hourinfo.getText().toString()));
 
 

@@ -1,46 +1,44 @@
 package com.example.zacarias_wagecalculator.Controller;
 
 public class Methods {
-
-    public double effort(double hours){
-        double overtime;
-        if (hours > 8) {
-            overtime = hours - 8;
+    public double solveEF(double more){
+        double effort;
+        if (more > 20) {
+            effort = more - 20;
         } else {
-            overtime = 0;
+            effort = 0;
         }
-        return overtime;
+        return effort;
     }
 
-    public double time(String employeeType, double hours, double overtime){
-        double regWage;
+    public double solveRegular(String employeeType, double more, double effort){
+        double regular;
         if (employeeType.equals("Regular")){
-            regWage = (hours - overtime) * 100;
+            regular = (more - effort) * 99;
         } else if (employeeType.equals("Probationary")){
-            regWage = (hours - overtime) * 90;
+            regular = (more - effort) * 68;
         } else {
-            regWage = (hours - overtime) * 75;
+            regular = (more - effort) * 50;
         }
-        return regWage;
+        return regular;
     }
 
-    public double overwork(String employeeType, double overtime){
-        double otWage;
+    public double solveTime(String employeeType, double effort){
+        double overWage;
         if (employeeType.equals("Regular")){
-            otWage = overtime * 115;
+            overWage = effort * 140;
         } else if (employeeType.equals("Probationary")){
-            otWage = overtime * 100;
+            overWage = effort * 120;
         } else {
-            otWage = overtime * 90;
+            overWage = effort * 99;
         }
-        return otWage;
+        return overWage;
     }
 
-    public double total(double regWage, double otWage){
-        return regWage + otWage;
+    public double solveTotal(double regularWage, double overWage){
+        return regularWage + overWage;
     }
 }
-
 
 
 
