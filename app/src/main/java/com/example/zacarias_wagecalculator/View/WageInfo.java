@@ -36,7 +36,7 @@ public class WageInfo extends AppCompatActivity implements View.OnClickListener{
         hourinfo = findViewById(R.id.hourinfo);
         typeofemployee = findViewById(R.id.choose);
 
-        //set listeners here
+        
         btnregular.setOnClickListener(this);
         btnprobitionary.setOnClickListener(this);
         btnpartime.setOnClickListener(this);
