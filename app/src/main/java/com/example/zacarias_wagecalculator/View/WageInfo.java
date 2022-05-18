@@ -17,7 +17,7 @@ import com.example.zacarias_wagecalculator.R;
 
 public class WageInfo extends AppCompatActivity implements View.OnClickListener{
     EditText employee,hourinfo;
-    Button btnregular,btnpartime,btnprobitionary,btnnext,goback;
+    Button btnregular,btnpartime,btnprobitionary,btnnext;
     TextView typeofemployee;
     Variables numbers=new Variables();
 
